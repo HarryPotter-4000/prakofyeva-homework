@@ -15,7 +15,10 @@ export class Car {
     yearOfManufacturing,
     maxSpeed,
     maxFuelVolume,
-    fuelConsumption
+    fuelConsumption,
+    currentFuelVolume = 0,
+    isStarted = false,
+    mileage = 0
   ) {
     this.brand = brand;
     this.model = model;
@@ -23,9 +26,9 @@ export class Car {
     this.maxSpeed = maxSpeed;
     this.maxFuelVolume = maxFuelVolume;
     this.fuelConsumption = fuelConsumption;
-    this.#currentFuelVolume = 0;
-    this.#mileage = 0;
-    this.#isStarted = false;
+    this.#currentFuelVolume = currentFuelVolume;
+    this.#mileage = mileage;
+    this.#isStarted = isStarted;
   }
 
   start() {
