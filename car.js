@@ -20,12 +20,12 @@ export class Car {
     isStarted = false,
     mileage = 0
   ) {
-    this.brand = brand;
-    this.model = model;
-    this.yearOfManufacturing = yearOfManufacturing;
-    this.maxSpeed = maxSpeed;
-    this.maxFuelVolume = maxFuelVolume;
-    this.fuelConsumption = fuelConsumption;
+    this.#setBrand(brand);
+    this.#setModel(model);
+    this.#setYearOfManufacturing(yearOfManufacturing);
+    this.#setMaxSpeed(maxSpeed);
+    this.#setMaxFuelVolume(maxFuelVolume);
+    this.#setFuelConsumption(fuelConsumption);
     this.#currentFuelVolume = currentFuelVolume;
     this.#mileage = mileage;
     this.#isStarted = isStarted;
@@ -86,11 +86,7 @@ export class Car {
     }
   }
 
-  get brand() {
-    return this.#brand;
-  }
-
-  set brand(brand) {
+  #setBrand(brand) {
     if (typeof brand === 'string' && brand.length >= 1 && brand.length <= 50) {
       this.#brand = brand;
     } else {
@@ -98,11 +94,11 @@ export class Car {
     }
   }
 
-  get model() {
-    return this.#model;
+  get brand() {
+    return this.#brand;
   }
 
-  set model(model) {
+  #setModel(model) {
     if (typeof model === 'string' && model.length >= 1 && model.length <= 50) {
       this.#model = model;
     } else {
@@ -110,11 +106,11 @@ export class Car {
     }
   }
 
-  get yearOfManufacturing() {
-    return this.#yearOfManufacturing;
+  get model() {
+    return this.#model;
   }
 
-  set yearOfManufacturing(year) {
+  #setYearOfManufacturing(year) {
     if (
       Number.isInteger(year) &&
       year >= 1900 &&
@@ -126,11 +122,11 @@ export class Car {
     }
   }
 
-  get maxSpeed() {
-    return this.#maxSpeed;
+  get yearOfManufacturing() {
+    return this.#yearOfManufacturing;
   }
 
-  set maxSpeed(speed) {
+  #setMaxSpeed(speed) {
     if (Number.isInteger(speed) && speed >= 100 && speed <= 300) {
       this.#maxSpeed = speed;
     } else {
@@ -138,11 +134,11 @@ export class Car {
     }
   }
 
-  get maxFuelVolume() {
-    return this.#maxFuelVolume;
+  get maxSpeed() {
+    return this.#maxSpeed;
   }
 
-  set maxFuelVolume(maxFuelVolume) {
+  #setMaxFuelVolume(maxFuelVolume) {
     if (
       Number.isInteger(maxFuelVolume) &&
       maxFuelVolume >= 5 &&
@@ -154,11 +150,11 @@ export class Car {
     }
   }
 
-  get fuelConsumption() {
-    return this.#fuelConsumption;
+  get maxFuelVolume() {
+    return this.#maxFuelVolume;
   }
 
-  set fuelConsumption(fuelConsumption) {
+  #setFuelConsumption(fuelConsumption) {
     if (Number.isFinite(fuelConsumption) && fuelConsumption > 0) {
       this.#fuelConsumption = fuelConsumption;
     } else {
@@ -166,6 +162,10 @@ export class Car {
         'Некорректное значение максимального потребления топлива'
       );
     }
+  }
+
+  get fuelConsumption() {
+    return this.#fuelConsumption;
   }
 
   get currentFuelVolume() {
@@ -179,4 +179,5 @@ export class Car {
   get mileage() {
     return this.#mileage;
   }
+
 }
