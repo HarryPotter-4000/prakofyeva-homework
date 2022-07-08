@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  margin: 0 auto;
+  padding: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+#root {
+  width: 286px;
+  height: 370px;
+  padding: 24px;
+  margin: 24px auto;
+  position: relative;
+  background: #b1b7b877;
+}
+input {
+  width: 238px;
+  height: 38px;
+  padding: 8px;
+  text-align: right;
+  border-radius: 6px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.838);
+  border: 2px solid rgba(130, 134, 135, 0.831);
+  margin: 32px 0;
+}
+button {
+  width: 38px;
+  height: 38px;
+  padding: 6px 8px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  background-color: rgba(208, 201, 201, 0.838);
+  border: 2px solid rgba(130, 134, 135, 0.831);
+}
+button:hover {
+  background-color: rgba(236, 232, 232, 0.913);
+}
+button:active {
+  background-color: rgba(208, 220, 220, 0.913);
+}
+button[data-value='7'] {
+  position: absolute;
+  top: 124px;
+  left: 24px;
+}
+button[data-value='8'] {
+  position: absolute;
+  top: 124px;
+  left: 74px;
+}
+button[data-value='9'] {
+  position: absolute;
+  top: 124px;
+  left: 124px;
+}
+button[data-value='modulus'] {
+  position: absolute;
+  top: 124px;
+  left: 174px;
+  background-color: rgba(248, 174, 56, 0.918);
+}
+button[data-value='modulus']:active {
+  background-color: rgb(250, 144, 5);
+}
+button[data-value='backspace'] {
+  position: absolute;
+  top: 124px;
+  left: 224px;
+  background-color: rgba(248, 174, 56, 0.918);
+}
+button[data-value='backspace']:active {
+  background-color: rgb(250, 144, 5);
+}
+button[data-value='4'] {
+  position: absolute;
+  top: 174px;
+  left: 24px;
+}
+button[data-value='5'] {
+  position: absolute;
+  top: 174px;
+  left: 74px;
+}
+button[data-value='6'] {
+  position: absolute;
+  top: 174px;
+  left: 124px;
+}
+button[data-value='multiply'] {
+  position: absolute;
+  top: 174px;
+  left: 174px;
+  background-color: rgba(248, 174, 56, 0.918);
+}
+button[data-value='multiply']:active {
+  background-color: rgb(250, 144, 5);
+}
+button[data-value='division'] {
+  position: absolute;
+  top: 174px;
+  left: 224px;
+  background-color: rgba(248, 174, 56, 0.918);
+}
+button[data-value='division']:active {
+  background-color: rgb(250, 144, 5);
+}
+button[data-value='1'] {
+  position: absolute;
+  top: 224px;
+  left: 24px;
+}
+button[data-value='2'] {
+  position: absolute;
+  top: 224px;
+  left: 74px;
+}
+button[data-value='3'] {
+  position: absolute;
+  top: 224px;
+  left: 124px;
+}
+button[data-value='minus'] {
+  position: absolute;
+  top: 224px;
+  left: 174px;
+  background-color: rgba(248, 174, 56, 0.918);
+}
+button[data-value='minus']:active {
+  background-color: rgb(250, 144, 5);
+}
+button[data-value='clear'] {
+  position: absolute;
+  top: 274px;
+  left: 24px;
+  background-color: rgba(248, 174, 56, 0.918);
+}
+button[data-value='clear']:active {
+  background-color: rgb(250, 144, 5);
+}
+button[data-value='0'] {
+  position: absolute;
+  top: 274px;
+  left: 74px;
+}
+button[data-value='decimal'] {
+  position: absolute;
+  top: 274px;
+  left: 124px;
+}
+button[data-value='plus'] {
+  position: absolute;
+  top: 274px;
+  left: 174px;
+  background-color: rgba(248, 174, 56, 0.918);
+}
+button[data-value='plus']:active {
+  background-color: rgb(250, 144, 5);
+}
+button[data-value='equal'] {
+  position: absolute;
+  height: 88px;
+  top: 224px;
+  left: 224px;
+  background-color: rgba(248, 174, 56, 0.918);
+}
+button[data-value='equal']:active {
+  background-color: rgb(250, 144, 5);
+}
