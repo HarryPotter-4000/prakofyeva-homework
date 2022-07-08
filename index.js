@@ -1,15 +1,4 @@
 const CALCULATOR_CONFIG = {
-  // 0: { type: 'number', value: 0, title: '0' },
-  // 1: { type: 'number', value: 1, title: '1' },
-  // 4: { type: 'number', value: 4, title: '4' },
-  // 5: { type: 'number', value: 5, title: '5' },
-  // 6: { type: 'number', value: 6, title: '6' },
-  // 2: { type: 'number', value: 2, title: '2' },
-  // 3: { type: 'number', value: 3, title: '3' },
-  // 7: { type: 'number', value: 7, title: '7' },
-  // 8: { type: 'number', value: 8, title: '8' },
-  // 9: { type: 'number', value: 9, title: '9' },
-
   0: { type: 'number', value: 0, title: '0' },
   1: { type: 'number', value: 1, title: '1' },
   2: { type: 'number', value: 2, title: '2' },
